@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jagat Jyoti Music School</title>
+</head>
+<body>
+
+<header>
+    <h1>St. Paul's English High School & Junior College</h1>
+    <p>Welcome to the world of music!</p>
+</header>
+
+<div class="container">
+    <nav class="sidebar">
+        <h2>Titles</h2>
+        <ul>
+            <li><a href="#" onclick="showContent('content1')">About Us</a></li>
+            <li><a href="#" onclick="showContent('content2')">Courses</a></li>
+            <li><a href="#" onclick="showContent('content3')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <div id="content1" class="hidden">
+            <h3>About Us</h3>
+            <p>Jagat Jyoti Music School is dedicated to providing quality music education...</p>
+        </div>
+        <div id="content2" class="hidden">
+            <h3>Courses</h3>
+            <p>We offer a variety of music courses, including piano, guitar, and vocals...</p>
+        </div>
+        <div id="content3" class="hidden">
+            <h3>Contact</h3>
+            <p>Contact us at info@jagatjyotimusic.com or call us at (123) 456-7890.</p>
+        </div>
+    </section>
+</div>
+
+<script>
+    function showContent(contentId) {
+        // Hide all content sections
+        const contents = document.querySelectorAll('.content > div');
+        contents.forEach(content => {
+            content.classList.add('hidden');
+        });
+
+        // Show the selected content section
+        const selectedContent = document.getElementById(contentId);
+        selectedContent.classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
